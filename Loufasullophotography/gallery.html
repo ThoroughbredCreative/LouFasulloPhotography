@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Photography Gallery | LouFasullo Photography Vancouver</title>
+    <meta name="description" content="Browse the full wedding photography portfolio of LouFasullo Photography. Candid, editorial-style wedding photos from Vancouver, BC and destinations worldwide.">
+    <meta name="keywords" content="wedding photography portfolio, wedding photos Vancouver, wedding photographer gallery, Vancouver wedding photos, candid wedding photography examples, wedding photography portfolio Vancouver BC">
+    <meta name="author" content="LouFasullo Photography">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.loufasullo.com/gallery.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wedding Photography Gallery | LouFasullo Photography">
+    <meta property="og:description" content="Browse our full portfolio of candid, editorial-style wedding photography from Vancouver and beyond.">
+    <meta property="og:url" content="https://www.loufasullo.com/gallery.html">
+    <meta property="og:site_name" content="LouFasullo Photography">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wedding Photography Gallery | LouFasullo Photography">
+    <meta name="twitter:description" content="Browse our full portfolio of candid, editorial-style wedding photography from Vancouver and beyond.">
+
+    <!-- Prevent theme flicker by setting theme before page renders -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-glass: rgba(255, 255, 255, 0.05);
+            --text: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --accent: #d4c5b3;
+            --slate: #2c3e50;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-glass: rgba(255, 255, 255, 0.15);
+            --transition: all 0.3s ease;
+            --star-dot: rgba(255, 255, 255, 0.6);
+        }
+
+        [data-theme="light"] {
+            --bg: #EDE8D0;
+            --surface: #f9f7f5;
+            --surface-glass: rgba(255, 255, 255, 0.4);
+            --text: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #b5a48d;
+            --border: rgba(0, 0, 0, 0.1);
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --star-dot: rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+            padding-top: 80px;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: var(--accent);
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(var(--bg), 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-left {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .theme-switch {
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            width: 50px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .track {
+            position: absolute;
+            inset: 0;
+            background: var(--surface);
+            border-radius: 26px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        input:checked ~ .thumb {
+            transform: translateX(24px);
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7rem;
+            pointer-events: none;
+        }
+
+        .icon-sun {
+            left: 6px;
+            color: var(--text-muted);
+        }
+
+        .icon-moon {
+            right: 6px;
+            color: var(--text-muted);
+        }
+
+        /* Global Stars Background */
+        .stars-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stars-bg .static-stars {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, var(--star-dot), transparent),
+                radial-gradient(2px 2px at 40px 70px, var(--star-dot), transparent),
+                radial-gradient(1px 1px at 90px 40px, var(--star-dot), transparent),
+                radial-gradient(2px 2px at 130px 80px, var(--star-dot), transparent),
+                radial-gradient(1px 1px at 160px 120px, var(--star-dot), transparent),
+                radial-gradient(2px 2px at 50px 160px, var(--star-dot), transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 5s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.7; }
+        }
+
+        .shooting-stars-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        /* Gallery Page Content */
+        .gallery-page {
+            padding: 140px 5% 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-page h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-page .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+        }
+
+        .gallery-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+        }
+
+        .gallery-back:hover {
+            color: var(--accent);
+        }
+
+        /* Polaroid Grid */
+        .polaroid-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .polaroid-card {
+            background: #fff;
+            padding: 14px 14px 48px 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-radius: 2px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .polaroid-card:hover {
+            transform: translateY(-6px) rotate(-1deg);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .polaroid-card:nth-child(even):hover {
+            transform: translateY(-6px) rotate(1deg);
+        }
+
+        .polaroid-card .img-wrap {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .polaroid-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-radius: 1px;
+            transition: filter 0.3s ease;
+        }
+
+        .polaroid-card .img-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .polaroid-card .img-wrap:hover .img-overlay {
+            opacity: 1;
+        }
+
+        .polaroid-card .img-wrap:hover img {
+            filter: brightness(0.7);
+        }
+
+        .polaroid-card .view-btn {
+            padding: 10px 24px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .polaroid-card .view-btn:hover {
+            filter: brightness(1.15);
+            transform: scale(1.05);
+        }
+
+        .polaroid-card .caption {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox .lightbox-caption {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .lightbox .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 10px;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .lightbox .lightbox-nav:hover {
+            opacity: 1;
+        }
+
+        .lightbox .lightbox-prev { left: 20px; }
+        .lightbox .lightbox-next { right: 20px; }
+
+        /* Footer */
+        footer {
+            padding: 60px 5%;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer .brand {
+            position: relative;
+            left: auto;
+            transform: none;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 968px) {
+            nav ul { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            .polaroid-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Global Stars Background -->
+    <div class="stars-bg" id="stars-bg">
+        <div class="static-stars"></div>
+        <svg class="shooting-stars-svg" id="shooting-stars-1">
+            <defs>
+                <linearGradient id="star-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop id="sg1-trail" offset="0%" style="stop-color:#2EB9DF;stop-opacity:0" />
+                    <stop id="sg1-star" offset="100%" style="stop-color:#9E00FF;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg class="shooting-stars-svg" id="shooting-stars-2">
+            <defs>
+                <linearGradient id="star-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop id="sg2-trail" offset="0%" style="stop-color:#FFB800;stop-opacity:0" />
+                    <stop id="sg2-star" offset="100%" style="stop-color:#FF0099;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg class="shooting-stars-svg" id="shooting-stars-3">
+            <defs>
+                <linearGradient id="star-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop id="sg3-trail" offset="0%" style="stop-color:#00B8FF;stop-opacity:0" />
+                    <stop id="sg3-star" offset="100%" style="stop-color:#00FF9E;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#process">Process</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="brand">LOUFASULLO</a>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox" onchange="toggleTheme()">
+                        <span class="track"></span>
+                        <span class="thumb"></span>
+                        <span class="icon icon-sun"><i class="fas fa-sun"></i></span>
+                        <span class="icon icon-moon"><i class="fas fa-moon"></i></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <a href="index.html#gallery" class="gallery-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1>Full Gallery</h1>
+        <p class="subtitle">A collection of our finest moments</p>
+
+        <div class="polaroid-grid">
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(0)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/f79149d7-53a7-49f0-8d78-3b7554107eb0_rw_1200.png?h=1e9e8dcc0bcdf7cd81f5a82a7ce893e0" alt="Lou Fasullo Portrait">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Lou Fasullo Portrait</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(1)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/83deba16-f7b6-4469-a3d6-d30ba5c27e0a_rw_1200.png?h=3efc99749f191ba798753b95895fa356" alt="Wedding Portrait">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Wedding Portrait</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(2)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/2283bc18-bf7e-449f-b0ba-304b8c7b31e9_rw_1200.jpg?h=5991cafca9f127dbf7049f5c60edd317" alt="The Couple">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">The Couple</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(3)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/1687f6db-5c57-449c-a8df-3faaf83644c8_rw_1200.png?h=8103517a581acaa5a0e403a0626e63ca" alt="Elegant Moment">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Elegant Moment</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(4)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/b60d1ea7-83ac-41bd-b20d-c52972e51a05_rw_1200.jpg?h=5290d52c7d7c92f546ecca4090dc4c4e" alt="Wedding Day">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Wedding Day</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(5)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/cb3f5b14-9610-483b-8ad0-f99c5240e19a_rw_1200.jpg?h=925f517408ba80147cab033ee9718294" alt="Forever Together">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Forever Together</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(6)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/a7b9a3b9-6195-4444-a172-9914c5d56ea2_rw_1200.jpg?h=5c68ff55f728417ce2d9e03846abb82f" alt="Love Story">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Love Story</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(7)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/7fae7879-412b-487f-ac71-1d7f70877bbc_rw_1200.jpg?h=3e74aa58229b8a4659fa1a9a77f62c5e" alt="Wedding Memories">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Wedding Memories</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(8)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/ca31672e-2986-4cb3-9156-8e9a4ea6e3dd_rw_1200.jpg?h=b172f74667fd95e5571b8be24a824998" alt="Timeless Romance">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Timeless Romance</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(9)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/93d0427f-92ee-41ce-8e79-d352061516aa_rw_1200.jpg?h=e4525069ecbe3172ab91f3acb4792d9a" alt="The Wedding">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">The Wedding</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(10)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/d6ee2111-0455-4cd2-b34a-2582b227648c_rw_1200.jpg?h=78825ab470ecc82cd7fc7b2f960e827e" alt="Cherished Moment">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Cherished Moment</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(11)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/a58d53bf-adc6-4b21-92ec-ceed34bb272d_rw_1200.jpg?h=a69ec6360c75a99b932af0e9a917b751" alt="Beautiful Day">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Beautiful Day</div>
+            </div>
+            <div class="polaroid-card">
+                <div class="img-wrap" onclick="openLightbox(12)">
+                    <img src="https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/563824e8-5fae-4361-b99e-7801a3ad371a_rw_1200.jpg?h=5a27687c5eeb034021b154643cb401fc" alt="Wedding Bliss">
+                    <div class="img-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Image</button></div>
+                </div>
+                <div class="caption">Wedding Bliss</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <footer>
+        <div class="brand">LOUFASULLO</div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/loufasphoto" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2026 LouFasullo Photography. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateStarGradients(theme) {
+            if (theme === 'light') {
+                document.getElementById('sg1-trail').style.stopColor = '#aaa';
+                document.getElementById('sg1-star').style.stopColor = '#333';
+                document.getElementById('sg2-trail').style.stopColor = '#bbb';
+                document.getElementById('sg2-star').style.stopColor = '#555';
+                document.getElementById('sg3-trail').style.stopColor = '#999';
+                document.getElementById('sg3-star').style.stopColor = '#222';
+            } else {
+                document.getElementById('sg1-trail').style.stopColor = '#2EB9DF';
+                document.getElementById('sg1-star').style.stopColor = '#9E00FF';
+                document.getElementById('sg2-trail').style.stopColor = '#FFB800';
+                document.getElementById('sg2-star').style.stopColor = '#FF0099';
+                document.getElementById('sg3-trail').style.stopColor = '#00B8FF';
+                document.getElementById('sg3-star').style.stopColor = '#00FF9E';
+            }
+        }
+
+        function toggleTheme() {
+            var cb = document.getElementById('theme-checkbox');
+            var isDark = cb.checked;
+            var theme = isDark ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateStarGradients(theme);
+        }
+
+        // Apply saved theme on load
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var cb = document.getElementById('theme-checkbox');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                cb.checked = true;
+                updateStarGradients('dark');
+            } else {
+                updateStarGradients('light');
+            }
+        })();
+
+        // Lightbox
+        var galleryImages = [
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/f79149d7-53a7-49f0-8d78-3b7554107eb0_rw_1920.png?h=f36c7ce59ce8bdbe1e2b14ef614b58b9', caption: 'Lou Fasullo Portrait' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/83deba16-f7b6-4469-a3d6-d30ba5c27e0a_rw_1920.png?h=43fe7907c91615a6e2aa5991611daa40', caption: 'Wedding Portrait' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/2283bc18-bf7e-449f-b0ba-304b8c7b31e9_rw_1920.jpg?h=56abff58cf0eb50dc0f0548d1d1ec866', caption: 'The Couple' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/1687f6db-5c57-449c-a8df-3faaf83644c8_rw_1920.png?h=230d2af479a4c6c3c95db43397a7e83e', caption: 'Elegant Moment' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/b60d1ea7-83ac-41bd-b20d-c52972e51a05_rw_1920.jpg?h=bc66be616f0c3cbd7dc7419078752b13', caption: 'Wedding Day' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/cb3f5b14-9610-483b-8ad0-f99c5240e19a_rw_1920.jpg?h=a7c92ef9d84db583357fe74d412e2701', caption: 'Forever Together' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/a7b9a3b9-6195-4444-a172-9914c5d56ea2_rw_1920.jpg?h=f0d162e168782c50513189d144b3663b', caption: 'Love Story' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/7fae7879-412b-487f-ac71-1d7f70877bbc_rw_1920.jpg?h=9423139c2bb421949ce0b89c6b1b10fb', caption: 'Wedding Memories' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/ca31672e-2986-4cb3-9156-8e9a4ea6e3dd_rw_1920.jpg?h=81be489f349ccd0aa60f3210afaa5fb8', caption: 'Timeless Romance' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/93d0427f-92ee-41ce-8e79-d352061516aa_rw_1920.jpg?h=10810e846b203194a4abf70ca292f254', caption: 'The Wedding' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/d6ee2111-0455-4cd2-b34a-2582b227648c_rw_1920.jpg?h=403e4043019d3b3115bbf4a1d452efb0', caption: 'Cherished Moment' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/a58d53bf-adc6-4b21-92ec-ceed34bb272d_rw_1920.jpg?h=ac4eee0760409ac1dd3c25dc1dcb0444', caption: 'Beautiful Day' },
+            { src: 'https://cdn.myportfolio.com/0558bd68-cb1a-4840-94f6-09aa6f7c7453/563824e8-5fae-4361-b99e-7801a3ad371a_rw_1920.jpg?h=2fc0fb5e7efd8c7f67b9cf70db65937b', caption: 'Wedding Bliss' }
+        ];
+        var currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            var lb = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = galleryImages[index].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[index].caption;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(dir) {
+            currentIndex = (currentIndex + dir + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightbox-img').src = galleryImages[currentIndex].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[currentIndex].caption;
+        }
+
+        // Close on backdrop click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Keyboard nav
+        document.addEventListener('keydown', function(e) {
+            var lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Shooting stars
+        (function() {
+            function createShootingStarLayer(svgId, gradientId, minSpeed, maxSpeed, minDelay, maxDelay) {
+                var svg = document.getElementById(svgId);
+                if (!svg) return;
+                var ns = 'http://www.w3.org/2000/svg';
+                var star = null;
+                var animId = null;
+
+                function getRandomStart() {
+                    var w = window.innerWidth;
+                    var h = window.innerHeight;
+                    var side = Math.floor(Math.random() * 4);
+                    var offset;
+                    switch (side) {
+                        case 0: offset = Math.random() * w; return { x: offset, y: 0, angle: 30 + Math.random() * 30 };
+                        case 1: offset = Math.random() * h; return { x: w, y: offset, angle: 135 + Math.random() * 30 };
+                        case 2: offset = Math.random() * w; return { x: offset, y: h, angle: 210 + Math.random() * 30 };
+                        default: offset = Math.random() * h; return { x: 0, y: offset, angle: 315 + Math.random() * 30 };
+                    }
+                }
+
+                function spawnStar() {
+                    var start = getRandomStart();
+                    var rect = document.createElementNS(ns, 'rect');
+                    rect.setAttribute('fill', 'url(#' + gradientId + ')');
+                    rect.setAttribute('height', '1');
+                    rect.setAttribute('rx', '0.5');
+                    svg.appendChild(rect);
+
+                    star = {
+                        el: rect,
+                        x: start.x,
+                        y: start.y,
+                        angle: start.angle,
+                        speed: minSpeed + Math.random() * (maxSpeed - minSpeed),
+                        distance: 0,
+                        scale: 1
+                    };
+                    animate();
+                }
+
+                function animate() {
+                    if (!star) return;
+                    var s = star;
+                    var rad = s.angle * Math.PI / 180;
+                    s.x += s.speed * Math.cos(rad);
+                    s.y += s.speed * Math.sin(rad);
+                    s.distance += s.speed;
+                    s.scale = 1 + s.distance / 100;
+
+                    var w = window.innerWidth;
+                    var h = window.innerHeight;
+
+                    if (s.x < -50 || s.x > w + 50 || s.y < -50 || s.y > h + 50) {
+                        svg.removeChild(s.el);
+                        star = null;
+                        var delay = minDelay + Math.random() * (maxDelay - minDelay);
+                        setTimeout(spawnStar, delay);
+                        return;
+                    }
+
+                    var starW = 12 * s.scale;
+                    s.el.setAttribute('width', starW);
+                    s.el.setAttribute('x', s.x);
+                    s.el.setAttribute('y', s.y);
+                    s.el.setAttribute('transform', 'rotate(' + s.angle + ' ' + (s.x + starW / 2) + ' ' + (s.y + 0.5) + ')');
+
+                    animId = requestAnimationFrame(animate);
+                }
+
+                var initialDelay = Math.random() * (maxDelay - minDelay);
+                setTimeout(spawnStar, initialDelay);
+            }
+
+            createShootingStarLayer('shooting-stars-1', 'star-grad-1', 15, 35, 1000, 3000);
+            createShootingStarLayer('shooting-stars-2', 'star-grad-2', 10, 25, 2000, 4000);
+            createShootingStarLayer('shooting-stars-3', 'star-grad-3', 20, 40, 1500, 3500);
+        })();
+    </script>
+</body>
+</html>

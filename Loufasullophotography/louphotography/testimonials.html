@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials & Reviews | LouFasullo Photography Vancouver</title>
+    <meta name="description" content="Read real reviews from couples who chose LouFasullo Photography for their Vancouver wedding. Discover why we're the top-rated wedding photographer in BC.">
+    <meta name="keywords" content="wedding photography reviews Vancouver, LouFasullo Photography testimonials, wedding photographer reviews BC, best wedding photographer Vancouver reviews, client testimonials wedding photography, Vancouver wedding photography feedback">
+    <meta name="author" content="LouFasullo Photography">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.loufasullo.com/testimonials.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Client Testimonials | LouFasullo Photography">
+    <meta property="og:description" content="Read what couples are saying about their wedding photography experience with LouFasullo Photography in Vancouver.">
+    <meta property="og:url" content="https://www.loufasullo.com/testimonials.html">
+    <meta property="og:site_name" content="LouFasullo Photography">
+    <meta property="og:locale" content="en_CA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Client Testimonials | LouFasullo Photography">
+    <meta name="twitter:description" content="Read real reviews from couples who chose LouFasullo Photography for their Vancouver wedding.">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CA-BC">
+    <meta name="geo.placename" content="Vancouver">
+
+    <!-- Prevent theme flicker by setting theme before page renders -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-glass: rgba(255, 255, 255, 0.05);
+            --text: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --accent: #d4c5b3;
+            --slate: #2c3e50;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-glass: rgba(255, 255, 255, 0.15);
+            --transition: all 0.3s ease;
+            --star-dot: rgba(255, 255, 255, 0.6);
+        }
+
+        [data-theme="light"] {
+            --bg: #EDE8D0;
+            --surface: #f9f7f5;
+            --surface-glass: rgba(255, 255, 255, 0.4);
+            --text: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #b5a48d;
+            --border: rgba(0, 0, 0, 0.1);
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --star-dot: rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+            padding-top: 80px;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(var(--bg), 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-left {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-toggle i {
+            font-size: 0.6rem;
+            transition: var(--transition);
+        }
+
+        .dropdown:hover .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 15px;
+            background: var(--surface);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--surface-glass);
+            color: var(--accent);
+        }
+
+        .theme-switch {
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            width: 50px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .track {
+            position: absolute;
+            inset: 0;
+            background: var(--surface);
+            border-radius: 26px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        input:checked ~ .thumb {
+            transform: translateX(24px);
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7rem;
+            pointer-events: none;
+        }
+
+        .icon-sun {
+            left: 6px;
+            color: var(--text-muted);
+        }
+
+        .icon-moon {
+            right: 6px;
+            color: var(--text-muted);
+        }
+
+        section {
+            padding: 100px 5%;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: var(--surface-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 40px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .testimonial-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .testimonial-avatar {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .testimonial-location {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 968px) {
+            nav ul { display: none; }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#process">Process</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="brand">LOUFASULLO</a>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox" onchange="toggleTheme()">
+                        <span class="track"></span>
+                        <span class="thumb"></span>
+                        <span class="icon icon-sun"><i class="fas fa-sun"></i></span>
+                        <span class="icon icon-moon"><i class="fas fa-moon"></i></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1 style="text-align: center; font-size: 3rem; margin-bottom: 20px;">What Couples Are Saying</h1>
+        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Every wedding tells a unique story. Here's what some of our couples have shared about their experience.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"Lou didn't just take photos; he captured the feeling of the wind, the tears in my father's eyes, and the pure joy of the night."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Sarah & James">
+                    <div>
+                        <p class="testimonial-author">Sarah & James</p>
+                        <p class="testimonial-location">New York City, NY</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"We were nervous about being in front of the camera, but Lou made us feel so comfortable. The photos turned out absolutely stunning."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Emily & Michael">
+                    <div>
+                        <p class="testimonial-author">Emily & Michael</p>
+                        <p class="testimonial-location">Vancouver, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"The attention to detail was incredible. Every moment, every emotion, perfectly captured. We couldn't be happier with our wedding gallery."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Jessica & David">
+                    <div>
+                        <p class="testimonial-author">Jessica & David</p>
+                        <p class="testimonial-location">Whistler, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"Lou's candid approach brought out the real emotions of our day. Looking through our photos brings us right back to that magical moment."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Amanda & Chris">
+                    <div>
+                        <p class="testimonial-author">Amanda & Chris</p>
+                        <p class="testimonial-location">Victoria, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"Professional, talented, and so easy to work with. The 48-hour sneak peek was a wonderful surprise we'll never forget."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Rachel & Tom">
+                    <div>
+                        <p class="testimonial-author">Rachel & Tom</p>
+                        <p class="testimonial-location">Burnaby, BC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-quote">"Our photos are works of art. Lou has an incredible eye for composition and light. We've received so many compliments from our guests."</p>
+                <div class="testimonial-footer">
+                    <img class="testimonial-avatar" src="PHOTO_URL_HERE" alt="Lauren & Matthew">
+                    <div>
+                        <p class="testimonial-author">Lauren & Matthew</p>
+                        <p class="testimonial-location">Surrey, BC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleTheme() {
+            var cb = document.getElementById('theme-checkbox');
+            var isDark = cb.checked;
+            var theme = isDark ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // Apply saved theme on load
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var cb = document.getElementById('theme-checkbox');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                cb.checked = true;
+            }
+        })();
+    </script>
+</body>
+</html>
