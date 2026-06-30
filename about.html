@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Lou Fasullo - Wedding Photographer | LouFasullo Photography Vancouver</title>
+    <meta name="description" content="Meet Lou Fasullo, an experienced wedding photographer in Vancouver, BC. More than just capturing moments, Lou tells your story with heart, guidance, and expertise.">
+    <meta name="keywords" content="Lou Fasullo photographer, Vancouver wedding photographer about, wedding photography philosophy, experienced wedding photographer BC, wedding photography mentor, Vancouver photographer bio">
+    <meta name="author" content="LouFasullo Photography">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.loufasullo.com/about.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Lou Fasullo | LouFasullo Photography">
+    <meta property="og:description" content="Meet Lou Fasullo, a wedding photographer who captures not just moments, but the story and feeling of your day.">
+    <meta property="og:url" content="https://www.loufasullo.com/about.html">
+    <meta property="og:site_name" content="LouFasullo Photography">
+    <meta property="og:locale" content="en_CA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Lou Fasullo | LouFasullo Photography">
+    <meta name="twitter:description" content="Meet Lou Fasullo, a wedding photographer who captures your story.">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CA-BC">
+    <meta name="geo.placename" content="Vancouver">
+
+    <!-- Prevent theme flicker by setting theme before page renders -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --surface: #1a1a1a;
+            --surface-glass: rgba(255, 255, 255, 0.05);
+            --text: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --accent: #d4c5b3;
+            --slate: #2c3e50;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-glass: rgba(255, 255, 255, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] {
+            --bg: #EDE8D0;
+            --surface: #f9f7f5;
+            --surface-glass: rgba(255, 255, 255, 0.4);
+            --text: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #b5a48d;
+            --border: rgba(0, 0, 0, 0.1);
+            --border-glass: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(var(--bg), 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-left {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .theme-switch {
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            width: 50px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .track {
+            position: absolute;
+            inset: 0;
+            background: var(--surface);
+            border-radius: 26px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        input:checked ~ .thumb {
+            transform: translateX(24px);
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7rem;
+            pointer-events: none;
+        }
+
+        .icon-sun {
+            left: 6px;
+            color: var(--text-muted);
+        }
+
+        .icon-moon {
+            right: 6px;
+            color: var(--text-muted);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&q=80&w=2000') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+            padding: 0 5%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-quote {
+            font-size: 1.5rem;
+            max-width: 800px;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+        }
+
+        /* Content Sections */
+        section {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .intro-section {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .philosophy-card {
+            padding: 40px;
+            background: var(--surface-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            box-shadow:
+                0 4px 20px rgba(181, 164, 141, 0.15),
+                0 8px 40px rgba(181, 164, 141, 0.1),
+                inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 8px 30px rgba(181, 164, 141, 0.25),
+                0 12px 50px rgba(181, 164, 141, 0.15),
+                inset 0 1px 2px rgba(255, 255, 255, 0.1);
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .philosophy-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .approach-section {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 80px 60px;
+            margin-top: 80px;
+            box-shadow:
+                0 4px 20px rgba(181, 164, 141, 0.15),
+                0 8px 40px rgba(181, 164, 141, 0.1);
+        }
+
+        .approach-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .approach-section p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        @media (max-width: 968px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-quote { font-size: 1.2rem; }
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+            .approach-section {
+                padding: 40px 30px;
+            }
+            .intro-photo-grid { grid-template-columns: 1fr !important; }
+            .intro-photo-trio { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#process">Process</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="brand">LOUFASULLO</a>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox" onchange="toggleTheme()">
+                        <span class="track"></span>
+                        <span class="thumb"></span>
+                        <span class="icon icon-sun"><i class="fas fa-sun"></i></span>
+                        <span class="icon icon-moon"><i class="fas fa-moon"></i></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to My Corner of the Internet</h1>
+        <p class="hero-quote">"A wedding is so much more than just a moment caught on camera. It's a story unfolding. It's your story."</p>
+    </div>
+
+    <section>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 0 auto;">
+            <div>
+                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=800" alt="Lou Fasullo" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 4px;">
+            </div>
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 25px;">More Than a Photographer</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.9;">
+                    Hi, I'm Lou Fasullo, and I'm here to tell you that wedding photography is about so much more than beautiful images.
+                    Don't get me wrong — the photos matter, and I pour my heart into making sure they're stunning. But what I really do
+                    is help you navigate one of the most important days of your life.
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.9;">
+                    Most couples I work with have never planned a wedding before. You're figuring out timelines, coordinating vendors,
+                    managing family dynamics, and trying to stay present in the moment. That's where I come in — not just as your photographer,
+                    but as your guide, your advisor, and yes, even your friend for the day.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top: 0;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto;">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Wedding moment" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px;">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600" alt="Golden hour couple" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; margin-top: 40px;">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Wedding celebration" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px;">
+        </div>
+    </section>
+
+    <section>
+        <div class="philosophy-grid">
+            <div class="philosophy-card">
+                <h3>Guidance & Support</h3>
+                <p>
+                    From the moment we connect, I'm here to help. Whether it's advice on creating a realistic timeline,
+                    suggestions for the perfect portrait locations, or simply being a calming presence when things get hectic,
+                    I've got your back.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <h3>Experience-Focused</h3>
+                <p>
+                    I recognize that for most couples, this is your first wedding. You need someone who's been through this
+                    hundreds of times and knows what works. I bring that experience to ensure your day flows smoothly and
+                    beautifully.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <h3>Emotional Documentation</h3>
+                <p>
+                    My goal isn't just to show you how your wedding looked — it's to help you remember how it felt.
+                    The nervous excitement, the tears of joy, the laughter with friends. Those are the moments that matter most.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <h3>Multi-Role Approach</h3>
+                <p>
+                    On your wedding day, I wear many hats: photographer, timeline keeper, problem solver, and trusted confidant.
+                    Whatever you need to make your day perfect, I'm there to help make it happen.
+                </p>
+            </div>
+        </div>
+
+        <div class="approach-section">
+            <h2>My Approach</h2>
+            <p>
+                When you hire me, you're not just getting someone who shows up with a camera. You're getting a partner who
+                understands the weight and beauty of what's happening. I'll help you plan your timeline so we have enough
+                time for portraits without rushing. I'll suggest the best lighting and locations. I'll coordinate with your
+                other vendors to make sure everything runs smoothly.
+            </p>
+            <p>
+                And when the day is over and you're looking through your photos, my hope is that you don't just see beautiful
+                images. I want you to be transported back to that moment — to feel the butterflies, to hear the laughter,
+                to remember the way your partner looked at you during your vows.
+            </p>
+            <p style="text-align: center; font-size: 1.3rem; color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-top: 40px;">
+                Because that's what this is really about. Your story. Your love. Your once-in-a-lifetime day.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function toggleTheme() {
+            var cb = document.getElementById('theme-checkbox');
+            var isDark = cb.checked;
+            var theme = isDark ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var cb = document.getElementById('theme-checkbox');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                cb.checked = true;
+            }
+        })();
+    </script>
+</body>
+</html>
